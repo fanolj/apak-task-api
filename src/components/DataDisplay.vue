@@ -2,8 +2,9 @@
     <div>
       <h2>Data Display</h2>
       <ul>
+        <li>Name-----Area</li>
         <li v-for="item in data" :key="item.id">
-          {{ item.name }} - {{ item.value }}
+          {{ item.name.common }} - {{ item.area }} km2
         </li>
       </ul>
     </div>
@@ -13,7 +14,7 @@
   export default {
     props: {
       data: {
-        type: Array,
+        type: Object,
         required: true
       }
     }

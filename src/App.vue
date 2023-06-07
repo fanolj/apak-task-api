@@ -27,9 +27,11 @@ export default {
   },
   methods: {
     fetchData() {
-      axios.get('https://demo.erpnext.com/api/resource/User')
+      axios.get('https://restcountries.com/v3.1/all')
         .then(response => {
           this.data = response.data;
+          console.log(this.data)
+
           this.dataLoaded = true;
         })
         .catch(error => {
